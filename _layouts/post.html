@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="entry">
+  <header class="entry-head">
+    <p class="entry-meta">
+      {% if page.entry %}<span>Entry {{ page.entry }}</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="standfirst">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  {% if page.log %}
+  <section class="logcard" aria-label="Observation details">
+    <dl>
+      {% for row in page.log %}
+      <div class="logrow">
+        <dt>{{ row.label }}</dt>
+        <dd>{{ row.value }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+
+  <div class="entry-body">
+    {{ content }}
+  </div>
+
+  {% if page.downloads %}
+  <section class="downloads" aria-labelledby="downloads-title">
+    <h2 id="downloads-title">Files for this entry</h2>
+    <ul>
+      {% for d in page.downloads %}
+      <li><a href="{% if d.url contains '://' %}{{ d.url }}{% else %}{{ d.url | relative_url }}{% endif %}">{{ d.label }}</a>{% if d.note %} <span class="note">{{ d.note }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <nav class="entry-nav" aria-label="More entries">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">Earlier: {{ page.previous.title }}</a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}">Later: {{ page.next.title }}</a>{% endif %}
+    <a href="{{ '/' | relative_url }}">All entries</a>
+  </nav>
+</article>

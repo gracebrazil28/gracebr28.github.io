@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------
+# Site settings: change the three YOUR-USERNAME values below.
+# ---------------------------------------------------------------
+title: Radio Sky Journal
+author: Grace Zhanel
+description: >-
+  A working log of radio astronomy experiments, from public telescope
+  data to my own small-dish observations.
+
+url: "https://gracebr28.github.io"   # your site address
+baseurl: ""                               # leave empty for a <username>.github.io repo
+repo_url: "https://github.com/gracebr28/gracebr28.github.io"
+
+# ---------------------------------------------------------------
+# Build settings (GitHub Pages supports everything below)
+# ---------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: /log/:year/:month/:title/
+
+plugins:
+  - jekyll-feed        # RSS feed at /feed.xml, so people can subscribe
+  - jekyll-seo-tag     # page titles and link previews
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: "projects"
+    values:
+      layout: default   # project READMEs carry their own headings
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

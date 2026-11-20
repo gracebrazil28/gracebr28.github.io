@@ -1,0 +1,21 @@
+---
+layout: default
+title: Log
+---
+<section class="intro">
+  <p>{{ site.description }} Each entry records what I set out to do, what the data showed, and what went wrong along the way.</p>
+</section>
+
+<ol class="entries" reversed>
+  {% for post in site.posts %}
+  <li class="entry-card">
+    <p class="entry-meta">
+      {% if post.entry %}<span>Entry {{ post.entry }}</span>{% endif %}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+    {% if post.target %}<p class="target">{{ post.target }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ol>
