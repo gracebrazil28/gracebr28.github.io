@@ -1,15 +1,15 @@
 # ---------------------------------------------------------------
-# Site settings: change the three YOUR-USERNAME values below.
+# Site settings
 # ---------------------------------------------------------------
 title: Radio Sky Journal
-author: Grace Zhanel
+author: Grace Brazil
 description: >-
   A working log of radio astronomy experiments, from public telescope
   data to my own small-dish observations.
 
-url: "https://gracebr28.github.io"   # your site address
-baseurl: ""                               # leave empty for a <username>.github.io repo
-repo_url: "https://github.com/gracebr28/gracebr28.github.io"
+url: "https://gracebrazil28.github.io"   # your account's Pages address
+baseurl: "/radioskyjournal"              # the repository name, because this is a project site
+repo_url: "https://github.com/gracebrazil28/radioskyjournal"
 
 # ---------------------------------------------------------------
 # Build settings (GitHub Pages supports everything below)
