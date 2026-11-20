@@ -139,3 +139,5 @@ The first write-up is worth keeping next to the second: comparing them shows whi
 
 - Split the recording in half and check that every feature appears in both halves.
 - Look for a way to calibrate the phase between the feeds, to test the Zeeman idea properly.
+
+**Official Github Repository:** <https://github.com/gracebrazil28/OH-Spectral-Line-Analysis> (for this project)
