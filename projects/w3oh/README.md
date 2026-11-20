@@ -11,6 +11,8 @@ A second script, `make_synthetic_test.py`, generates a synthetic recording with 
 **Dataset:** Daniel Estévez, *IQ recording of W3OH hydroxyl spectral line at 1665.4 MHz*, Zenodo record 6711078, published 25 June 2022 (v1, open):
 <https://zenodo.org/records/6711078>
 
+**Official Github Repository:** <https://github.com/gracebrazil28/OH-Spectral-Line-Analysis>
+
 ---
 
 ## Contents
